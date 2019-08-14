@@ -12,5 +12,5 @@ docker push olc/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=olc/multi-server:$SHA
-kubectl set image deployments/client-deployment server=olc/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=olc/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=olc/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=olc/multi-worker:$SHA
